@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script src="form.js"></script>
+
+    <style>
+        .redColour{
+            color: red;
+        }
+        .form{
+            background: linear-gradient(to bottom,rgb(0, 106, 255),rgba(255, 255, 0, 0.111));
+            /* text-align: center; */
+            text-align: justify;
+            margin-left: 500px;
+            margin-right: 500px;
+            border-radius: 10px;
+            border: solid black 8px;
+            padding-left: 10px;
+
+        }
+        #buttons{
+            text-align: center;
+        }
+
+        #body{
+            background-image: "https://images.pexels.com/photos/1723637/pexels-photo-1723637.jpeg?auto=compress&cs=tinysrgb&w=600;";
+        }
+    </style>
+</head>
+<body id="body">
+
+<div class="form">
+    <form name="formName" onsubmit="return validateForm()" method="post">
+
+        <h1 style="text-align: center;">Registration Form</h1>
+        <div>
+            <label for="nameId">Name</label>
+            <span class="redColour">*</span>
+            <span>:</span>
+            <input type="text" id="nameId" name="nameName">
+        </div>
+        <br>
+        <div>
+            <label for="emailId">Email</label>
+            <span class="redColour">*</span>
+            <span>:</span>
+            <input type="email" id="emailId" name="emailName" required>
+        </div>
+        <br>
+        <div>
+            <label for="phno">Ph No</label>
+            <span class="redColour">*</span>
+            <span>:</span>
+            <input type="tel" id="phno" name="phnoName" required>
+            <span id="errorIdNumber"></span>
+        </div>
+        <br>
+
+        <div>
+            <label for="passId">Enter NePassword</label>
+            <span class="redColour">*</span>
+            <span>:</span>
+            <input type="password" id="passId" name="passName" required>
+            <span id="spanPassId"></span>
+        </div>
+        <br>
+        <div>
+            <label for="passId1">Re-Enter Password</label>
+            <span class="redColour">*</span>
+            <span>:</span>
+            <input type="password" id="passId1" name="passName1" required>
+            <span id="spanPassId1"></span>
+        </div>
+        <br>
+        <div>
+            <span>Gender</span>
+            <span class="redColour">*</span>
+            <span>:</span>
+            <label for="maleId">Male</label>
+            <input type="radio" id="maleId" name="genderName">
+
+            <label for="femaleId">Female</label>
+            <input type="radio" id="femaleId" name="genderName">
+
+            <label for="transId">Trans</label>
+            <input type="radio" id="transId" name="genderName">
+        </div>
+        <br>
+
+        <div>
+            <label for="eId">Another Email</label>
+            <span class="redColour">*</span>
+            <span>:</span>
+            <input type="text" id="eId" name="eName" required>
+            <span id="spaneId"></span>
+        </div>
+        <br>
+
+        <div>
+            <label for="dobId">DOB</label>
+            <span class="redColour">*</span>
+            <span>:</span>
+            <input type="date" id="dobId" name="dobName">
+        </div>
+        <br>
+        <br>
+
+        <div id="buttons">
+            <button type="submit" value="submit">Submit</button>
+            <button type="reset" value="clear">Reset</button>
+        </div>
+
+        <br>
+
+
+    </form>
+</div>
+</body>
+</html>
